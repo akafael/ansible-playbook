@@ -35,7 +35,6 @@ install:
 verify: ${ANSIBLE_PLAYBOOK}
 	ansible-playbook @< --check
 
-
 # Run Playbook
 .PHONY: run
 run: ${ANSIBLE_PLAYBOOK}

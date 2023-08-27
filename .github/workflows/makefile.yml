@@ -21,7 +21,7 @@ jobs:
       run: make install
 
     - name: Check if the playbook is properly working
-      run: make check
+      run: make verify
 
     - name: Run Playbook
       run: make run
