@@ -7,7 +7,7 @@
         - git
         - build-essential
         - arduino
-      state: lastest
+      state: latest
   
   - name: Remove brltty to prevent conflict with /dev/USB0
     ansible.builtin.package:
