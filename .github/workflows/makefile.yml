@@ -20,5 +20,8 @@ jobs:
     - name: Install dependencies
       run: make install
 
-    - name: Check if the playbook is properly formated
+    - name: Check if the playbook is properly working
       run: make check
+
+    - name: Run Playbook
+      run: make run
