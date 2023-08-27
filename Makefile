@@ -28,7 +28,7 @@ help:
 # Install Ansible using pip
 .PHONY: install
 install:
-	apt install ansible
+	pip3 install --user ansible
 
 # Check if the playbook is properly formated
 .PHONY: verify
