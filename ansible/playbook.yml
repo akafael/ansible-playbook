@@ -8,7 +8,7 @@
   connection: local
   become: yes
   vars:
-    ansible_python_interpreter: /usr/local/bin/python3
+    ansible_python_interpreter: /usr/local/bin/python2.7
   tasks:
   - name: Ensure all packages are installed
     ansible.builtin.package:
