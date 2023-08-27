@@ -9,6 +9,8 @@
 # Get Makefile directory
 MAKEFILE_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
+ANSIBLE_PLAYBOOK:=$(MAKEFILE_DIR)/ansible/playbook.yml
+
 ###############################################################################
 # Rules
 ###############################################################################
@@ -26,4 +28,9 @@ help:
 # Install Ansible using pip
 .PHONY: install
 install:
-    pip3 install --user ansible
+	pip3 install --user ansible
+
+# Check if the playbook is properly formated
+.PHONY: verify
+verify: ${ANSIBLE_PLAYBOOK}
+	ansible-playbook @< --check
