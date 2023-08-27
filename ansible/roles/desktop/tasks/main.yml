@@ -1,0 +1,11 @@
+---
+##
+# Ensure all browsers are installed and configured
+##
+  - name: Install firefox
+    ansible.builtin.package:
+      name:
+        - firefox
+        - firefox-locale-pt
+        - firefox-locale-en
+      state: latest

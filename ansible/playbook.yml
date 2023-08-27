@@ -4,11 +4,12 @@
 # @author Akafael
 ##
 ---
-- hosts: localhost
+- name: Prepare a basic Enviroment
+  hosts: localhost
   connection: local
-  become: yes
-  tasks:
-  - name: Ensure all packages are installed
-    ansible.builtin.package:
-      name: firefox
-      state: present
+  become: true
+
+  roles:
+    - { role: desktop, tags: ['desktop'] }
+    - { role: arduino, tags: ['dev'] }
+

@@ -33,7 +33,7 @@ install:
 # Check if the playbook is properly formated
 .PHONY: verify
 verify: ${ANSIBLE_PLAYBOOK}
-	ansible-playbook $< --check 
+	ansible-playbook $< --check --diff
 
 # Run Playbook
 .PHONY: run

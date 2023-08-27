@@ -1,0 +1,16 @@
+##
+# Prepare Enviroment to work with Arduino
+##
+  - name: Install basic tool for Arduino development
+    ansible.builtin.package:
+      name: 
+        - git
+        - build-essential
+        - arduino
+      state: lastest
+  
+  - name: Remove brltty to prevent conflict with /dev/USB0
+    ansible.builtin.package:
+      name: 
+        - brltty
+      state: absent
